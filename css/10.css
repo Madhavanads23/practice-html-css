@@ -1,0 +1,45 @@
+body {
+
+    font-size: 20px;
+
+}
+
+nav a {
+
+    margin: 15px;
+    text-decoration: none;
+    font-size: 22px;
+
+}
+
+img {
+
+    width: 500px;
+    height: auto;
+
+}
+
+/* Media Query */
+
+@media screen and (max-width: 768px) {
+
+    nav a {
+
+        display: block;
+        margin: 10px;
+
+    }
+
+    img {
+
+        width: 80%;
+
+    }
+
+    body {
+
+        font-size: 14px;
+
+    }
+
+}

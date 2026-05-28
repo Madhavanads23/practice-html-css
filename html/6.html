@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Feedback Form</title>
+
+    <script>
+
+        function validatePhone() {
+
+            let phone =
+            document.getElementById("phone").value;
+
+            if(phone.length != 10) {
+
+                alert("Phone number must contain 10 digits");
+
+            }
+            else {
+
+                alert("Valid Phone Number");
+
+            }
+        }
+
+        function showFee() {
+
+            let event =
+            document.getElementById("event").value;
+
+            let fee;
+
+            if(event == "Music Fest") {
+                fee = 500;
+            }
+
+            else if(event == "Sports Day") {
+                fee = 300;
+            }
+
+            else {
+                fee = 200;
+            }
+
+            document.getElementById("fee").innerHTML =
+            "Event Fee: Rs." + fee;
+        }
+
+        function submitFeedback() {
+
+            alert("Feedback Submitted Successfully");
+
+        }
+
+        function enlargeImage(img) {
+
+            img.style.width = "400px";
+            img.style.height = "300px";
+
+        }
+
+        function countCharacters() {
+
+            let text =
+            document.getElementById("feedback").value;
+
+            document.getElementById("count").innerHTML =
+            text.length;
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <h2>Event Feedback Form</h2>
+
+    Phone Number:
+    <input type="text"
+           id="phone"
+           onblur="validatePhone()">
+
+    <br><br>
+
+    Select Event:
+    <select id="event" onchange="showFee()">
+
+        <option>Music Fest</option>
+        <option>Sports Day</option>
+        <option>Food Carnival</option>
+
+    </select>
+
+    <p id="fee"></p>
+
+    <button onclick="submitFeedback()">
+        Submit Feedback
+    </button>
+
+    <br><br>
+
+    <img src="event.jpg"
+         width="200"
+         ondblclick="enlargeImage(this)">
+
+    <br><br>
+
+    Feedback:
+    <textarea id="feedback"
+              onkeyup="countCharacters()">
+    </textarea>
+
+    <p>
+        Character Count:
+        <span id="count">0</span>
+    </p>
+
+</body>
+</html>

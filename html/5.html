@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Registration Form</title>
+
+    <style>
+
+        body {
+            font-family: Arial;
+        }
+
+        form {
+            width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 2px solid gray;
+            border-radius: 10px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+
+        button {
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            border: none;
+        }
+
+    </style>
+
+    <script>
+
+        function registerEvent() {
+
+            document.getElementById("result").value =
+            "Registration Successful";
+
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <form onsubmit="registerEvent(); return false;">
+
+        <h2>Event Registration</h2>
+
+        Name:
+        <input type="text"
+               placeholder="Enter your name"
+               required
+               autofocus>
+
+        <br><br>
+
+        Email:
+        <input type="email"
+               placeholder="Enter your email"
+               required>
+
+        <br><br>
+
+        Date:
+        <input type="date" required>
+
+        <br><br>
+
+        Event Type:
+        <select required>
+
+            <option value="">Select Event</option>
+            <option>Music Fest</option>
+            <option>Sports Day</option>
+            <option>Food Carnival</option>
+
+        </select>
+
+        <br><br>
+
+        Message:
+        <textarea placeholder="Enter message"></textarea>
+
+        <br><br>
+
+        <button type="submit">Register</button>
+
+        <br><br>
+
+        <output id="result"></output>
+
+    </form>
+
+</body>
+</html>

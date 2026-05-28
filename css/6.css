@@ -1,0 +1,42 @@
+/* Link Styling */
+
+a:link {
+
+    color: blue;
+
+}
+
+a:hover {
+
+    color: red;
+
+}
+
+a:active {
+
+    color: green;
+
+}
+
+a:visited {
+
+    color: purple;
+
+}
+
+/* List Styling */
+
+ul {
+
+    list-style-type: none;
+
+}
+
+li {
+
+    list-style-position: inside;
+    padding: 10px;
+    margin: 10px;
+    display: inline;
+
+}
